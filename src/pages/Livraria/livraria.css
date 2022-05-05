@@ -1,0 +1,31 @@
+.livro{
+    max-width: 1240px;
+    background-color: red;
+    margin: auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.logout{
+
+    font-family: 'heebo' sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #333333;
+    margin-top: 5px;
+
+}
+
+.circulo{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #333333bb;
+    border-radius: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
