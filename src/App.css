@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Heebo:wght@100;300;400;500&family=Lato:wght@100;400&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.login{
+  background-image: url('./assets/BackgroundImage.png');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.titleLogin{
+  width: 70px;
+  height: 40px;
+  font-size: 28px;
+  color: #FFFFFF;
+  font-family: 'Heebo', sans-serif;
+  line-height: 40px;
+  margin-left: 9px;
+  font-weight: 300;
+
+}
+
+.tituloLogin{
+  margin-top: 255px;
+  margin-left: 115px;
+  margin-bottom: 42px;
+}
+
+.inputEmail{
+  width: 368px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  margin-left: 115px;
+}
+
+label{
+  font-family: 'Heebo', sans-serif;
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 8px;
+  margin-top: 8px;
+  font-weight: 400;
+  width: 30px;
+  height: 16px;
+  
+}
+
+.inpt{
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  margin-left: 8px;
+
+}
+
+.inputSenha{
+  width: 368px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 115px;
+}
+
+.btnEntrar{
+  width: 85px;
+  height: 36px;
+  background-color: #ffffff;
+  border-radius: 44px;
+  font-family: 'Heebo', sans-serif;
+  color: #B22E6F;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 385px;  
+  margin-top: -48px;
+  position: absolute;
+}
+
+.alertError{
+  width:239px;
+  height: 48px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px;
+  margin-left: 115px;
+  margin-top: 24px;
+
+}
+.topvector{
+  margin-left:130px;
+  margin-bottom: -28px;
+  margin-top: -30px;
+}
+
+#alerta{
+  display: none;
+  margin-top: -16px;
+}
+
+@media  (max-width:600px) {
+  .login{
+    background-position: center;
+  }
+  .inputEmail{
+    width: 288px;
+    margin-left: 1px;
+  }
+
+  .inputSenha{
+    margin-left: 1px;
+    width: 288px;
+
+  }
+  label{
+    font-weight: 400;
+    font-size: 12px;
+   
+  }
+
+  .btnEntrar{
+    margin-left: 180px;
+  }
+
+  .tituloLogin{
+    margin-left: 14px;
+    margin-top: 180px;
+
+  }
+
+  .inputsLog{
+    margin-left: 15px;
+  }
+
+  .alertError{
+    margin-left: 14px;
+    
+    
+  }
+
+  .topvector{
+    margin-left: 30px;
+    margin-bottom: -29px;
+    
+  }
+  
+
+}
+/*media query tablets*/
+@media screen and (max-width:1024px) {
+  .login{    
+  }
+
+
+}
+
+@media (max-width:450px) {
+
+  .login{
+    background-position: center;
+  }
+  .inputEmail{
+    width: 288px;
+    margin-left: 1px;
+  }
+
+  .inputSenha{
+    margin-left: 1px;
+    width: 288px;
+
+  }
+  label{
+    font-weight: 400;
+    font-size: 12px;
+   
+  }
+
+  .btnEntrar{
+    margin-left: 180px;
+  }
+
+  .tituloLogin{
+    margin-left: 14px;
+    margin-top: 180px;
+
+  }
+
+  .inputsLog{
+    margin-left: 15px;
+  }
+
+  .alertError{
+    margin-left: 14px;
+    
+    
+  }
+
+  .topvector{
+    margin-left: 30px;
+    margin-bottom: -29px;
+    
+  }
+  
+
+
+}
+
+@media (max-width:280px) {
+
+}
