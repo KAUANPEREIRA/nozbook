@@ -34,9 +34,9 @@ export const Livraria = () => {
       <div className='livrosLivraria'>
        {biblioteca.map((biblioteca,key)=>{
          return(
-          <div className='card'>
+          <div className='card' key={key}>
           <div className='nome'>
-            ola
+            {biblioteca.title}
 
 
           </div>
