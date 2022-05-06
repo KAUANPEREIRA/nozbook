@@ -45,9 +45,83 @@
 }
 
 .card{
-    width:272px;
+    width:280px;
     height: 160px;
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0px 6px 24px rgba(84, 16, 95, 0.13);
+    display: flex;
+    margin-right:20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.imgLivro{
+   max-width: 81px;
+    height: 122px;
+    margin-top: 19px;
+    margin-left: 16px;
+}
+
+.nome{
+    font-family: 'heebo' sans-serif;
+    font-size: 14px;
+    color:#333333;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-left: 16px;
+
+}
+
+.blue{
+    color: #2E63F7;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 16px;
+    margin-top: 3px;
+
+}
+
+.detalhes{
+    display: flex;
+    flex-direction: column;
+}
+
+.editora{
+    width: 104px;
+    font-size: 12px;
+    margin-left: 14px;
+    color: #999999;
+    margin-top: 25px;
+    
+}
+
+.publisher{
+   padding: 5px;
+}
+
+.livrosLivraria{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 37px;
+    
+    
+}
+
+.livro{
+    
+   
+
+}
+
+body{
+
+    background-color: #E0E6EE;
+
+}
+
+@media  (max-width:600px) {
+    .livrosLivraria{
+        margin-left: 20px;
+    }
 }
