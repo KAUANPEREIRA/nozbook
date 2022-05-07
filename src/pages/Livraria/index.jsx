@@ -9,22 +9,54 @@ import {ImQuotesLeft} from 'react-icons/im'
 import { Navigate, useNavigate } from "react-router-dom"
 
 export const Livraria = () => {
-   const [isModalVisible,setModalVisible]=useState(false)
 
-  //////
-    const [biblioteca,setBiblioteca]=useState([])
-    useEffect(()=>{
-    axios.get("http://localhost:3000/data")
+  
+  const [autorizar,setAutorizar] =useState('')
+  
+  useEffect(()=>{
+    const article = {"email":"desafio@appnoz.com.br","password":"12341234"}
+    axios.post("http://books.appnoz.com.br/api/v1/auth/sign-in",article
+    )
     .then((response)=>{
-      setBiblioteca(response.data)
-      console.log(setBiblioteca)
-
+      console.log(response.headers.authorization)
+      setAutorizar(response.headers.authorization)
+      
+     
+     
     })
     .catch(()=>{
-      console.log('false')
+      console.log('deu erro')
     })
+
     
+
   },[])
+
+  
+
+
+
+   const [isModalVisible,setModalVisible]=useState(false)
+    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWM5YzUyNTYxODk3NDVkY2Q1MDUwMGEiLCJ2bGQiOjE2NTE5NDE0OTcxNDYsImlhdCI6MTY1MTk0NTA5NzE0Nn0.wuixC0vbkRHa3ZOsrFS-TrYATpYyN-FOQBjgKMGDU2o'
+    console.log(autorizar)
+  //////
+    const [biblioteca,setBiblioteca]=useState([])
+   useEffect(()=>{
+     axios.get("http://books.appnoz.com.br/api/v1/books?page=1&amount=25&category=biographies",{
+       headers:{
+        'accept':'application/json',
+        'Authorization':`Bearer ${token}`
+
+       }
+     })
+     .then((response)=>{
+      setBiblioteca(response.data.data)
+     })
+     .catch(()=>{
+       console.log('erro na requisiçãso')
+     })
+
+   },[])
   /////////
   let navigate = useNavigate()
  const HandleLogoof= ()=>{
@@ -109,7 +141,7 @@ export const Livraria = () => {
               {biblioteca.title}
             </div>
             <span className='blue'>
-              {biblioteca.authors[0]}
+              {biblioteca.authors}
             </span>
             <div className='editora'>
               <span >{biblioteca.pageCount}</span>

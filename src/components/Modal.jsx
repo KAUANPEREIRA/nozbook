@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React, { children } from 'react'
 import './modal.css'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 
