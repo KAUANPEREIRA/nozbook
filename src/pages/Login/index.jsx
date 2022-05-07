@@ -20,11 +20,11 @@ export const Login=()=> {
     .then((response)=>{
       console.log(response.headers.authorization)
       //setAutorizar(response.headers.authorization)
-      console.log(response.headers.authorization)
+      
       setAutorizar(response.headers.authorization)
       save = response.headers.authorization
       localStorage.setItem('save',save)
-      console.log('15331533'+ save)
+      
       
       
     })
