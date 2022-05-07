@@ -12,7 +12,7 @@ export const Login=()=> {
 
   //
   const [autorizar,setAutorizar] =useState('')
-  let save
+  let save 
   useEffect(()=>{
     const article = {"email":"desafio@appnoz.com.br","password":"12341234"}
     axios.post("http://books.appnoz.com.br/api/v1/auth/sign-in",article
@@ -20,6 +20,7 @@ export const Login=()=> {
     .then((response)=>{
       console.log(response.headers.authorization)
       //setAutorizar(response.headers.authorization)
+      console.log(response.headers.authorization)
       setAutorizar(response.headers.authorization)
       save = response.headers.authorization
       localStorage.setItem('save',save)

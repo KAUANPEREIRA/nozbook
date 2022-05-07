@@ -35,7 +35,7 @@ export const Livraria = () => {
 
 
    const [isModalVisible,setModalVisible]=useState(false)
-    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWM5YzUyNTYxODk3NDVkY2Q1MDUwMGEiLCJ2bGQiOjE2NTE5NDQyMDkzNDgsImlhdCI6MTY1MTk0NzgwOTM0OH0.zrk6VNtAlVDRru9EqlQV7YdNSIIgaNy6Zzb6UowSHVc'
+    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWM5YzUyNTYxODk3NDVkY2Q1MDUwMGEiLCJ2bGQiOjE2NTE5NDc5NjM0ODIsImlhdCI6MTY1MTk1MTU2MzQ4Mn0.iu1KKJC96H4b-SzD0WTFKo0_CwgpYqr-sKanXcP_jHw'
     let tToken = localStorage.getItem('save')
     console.log(token+'token')
     
