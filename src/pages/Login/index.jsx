@@ -1,9 +1,9 @@
 import './login.css'
 import IMG1 from '../../assets/NOZ_marca_FP1.png'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import VECTOR from '../../assets/Vector1.png'
 import { Navigate, useNavigate } from "react-router-dom"
-
+import axios from 'axios'
 
 export const Login=()=> {
   //uso de react hooks
@@ -11,6 +11,30 @@ export const Login=()=> {
   const [senha, setSenha]=useState()
 
   //
+  const [autorizar,setAutorizar] =useState('')
+  let save
+  useEffect(()=>{
+    const article = {"email":"desafio@appnoz.com.br","password":"12341234"}
+    axios.post("http://books.appnoz.com.br/api/v1/auth/sign-in",article
+    )
+    .then((response)=>{
+      console.log(response.headers.authorization)
+      //setAutorizar(response.headers.authorization)
+      setAutorizar(response.headers.authorization)
+      save = response.headers.authorization
+      localStorage.setItem('save',save)
+      console.log('15331533'+ save)
+      
+      
+    })
+    .catch(()=>{
+      console.log('deu erro')
+    })
+
+    
+
+  },[])
+
  
 
   //função para login

@@ -11,9 +11,9 @@ import { Navigate, useNavigate } from "react-router-dom"
 export const Livraria = () => {
 
   
-  const [autorizar,setAutorizar] =useState('')
   
-  useEffect(()=>{
+  
+ /* useEffect(()=>{
     const article = {"email":"desafio@appnoz.com.br","password":"12341234"}
     axios.post("http://books.appnoz.com.br/api/v1/auth/sign-in",article
     )
@@ -21,8 +21,6 @@ export const Livraria = () => {
       console.log(response.headers.authorization)
       setAutorizar(response.headers.authorization)
       
-     
-     
     })
     .catch(()=>{
       console.log('deu erro')
@@ -30,22 +28,24 @@ export const Livraria = () => {
 
     
 
-  },[])
+  },[])*/
 
   
 
 
 
    const [isModalVisible,setModalVisible]=useState(false)
-    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWM5YzUyNTYxODk3NDVkY2Q1MDUwMGEiLCJ2bGQiOjE2NTE5NDE0OTcxNDYsImlhdCI6MTY1MTk0NTA5NzE0Nn0.wuixC0vbkRHa3ZOsrFS-TrYATpYyN-FOQBjgKMGDU2o'
-    console.log(autorizar)
+    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWM5YzUyNTYxODk3NDVkY2Q1MDUwMGEiLCJ2bGQiOjE2NTE5NDQyMDkzNDgsImlhdCI6MTY1MTk0NzgwOTM0OH0.zrk6VNtAlVDRru9EqlQV7YdNSIIgaNy6Zzb6UowSHVc'
+    let tToken = localStorage.getItem('save')
+    console.log(token+'token')
+    
   //////
     const [biblioteca,setBiblioteca]=useState([])
    useEffect(()=>{
      axios.get("http://books.appnoz.com.br/api/v1/books?page=1&amount=25&category=biographies",{
        headers:{
         'accept':'application/json',
-        'Authorization':`Bearer ${token}`
+        'Authorization':`Bearer ${tToken}`
 
        }
      })
